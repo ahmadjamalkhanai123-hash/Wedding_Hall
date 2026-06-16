@@ -1,0 +1,12 @@
+apiVersion: v2
+name: wedding-hall
+description: Grandeur Lounge & Marbella Cave — Wedding Hall Website, Warsak Road Peshawar
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: jamalafridi99
+keywords:
+  - nextjs
+  - wedding
+  - frontend
