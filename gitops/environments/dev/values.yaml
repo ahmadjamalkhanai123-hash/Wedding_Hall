@@ -1,0 +1,28 @@
+replicaCount: 1
+
+image:
+  repository: jamalafridi99/wedding-hall
+  tag: "latest"
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: wedding-hall.dev.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+autoscaling:
+  enabled: false
