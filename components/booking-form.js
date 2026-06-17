@@ -101,7 +101,7 @@ export function BookingForm() {
                     <div className={`lg:col-span-3 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
                         <div className="bg-[#FDFBF7] rounded-2xl p-8 sm:p-10 border border-[#E8E0D0] shadow-xl shadow-[#D4AF37]/5">
                             <h3 className="font-serif text-2xl font-bold text-[#1A1A1A] mb-2">Inquiry Form</h3>
-                            <p className="text-[#6B6B6B] text-sm mb-8">Fill in the details and we&apos;ll get back to you within 24 hours.</p>
+                            <p className="text-[#6B6B6B] text-sm mb-8">Fill in the details and we&apos;ll get back to you within 12 hours.</p>
 
                             {isSubmitted ? (
                                 <div className="text-center py-12 animate-scale-in">
