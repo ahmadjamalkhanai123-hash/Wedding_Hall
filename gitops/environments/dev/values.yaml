@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: jamalafridi99/wedding-hall
-  tag: "975b3501357b1affd1ec28eadd4e20a2c4026edb"
+  tag: "b1d20f74bc7a3aadd4ea0b74e83e0b18ce22e0c3"
   pullPolicy: Always
 
 resources:
