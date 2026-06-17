@@ -15,7 +15,15 @@ export function BookingForm() {
         message: "",
     })
     const [isSubmitted, setIsSubmitted] = useState(false)
+    const [whatsappNumber, setWhatsappNumber] = useState("923001234567")
     const sectionRef = useRef(null)
+
+    useEffect(() => {
+        fetch("/api/config")
+            .then((res) => res.json())
+            .then((data) => setWhatsappNumber(data.whatsappNumber))
+            .catch(() => {})
+    }, [])
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -42,7 +50,6 @@ export function BookingForm() {
             `👥 *Guests:* ${formData.guests}%0A` +
             `💬 *Message:* ${formData.message}`
 
-        const whatsappNumber = "923001234567" // Replace with actual number
         window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank")
         setIsSubmitted(true)
         setTimeout(() => setIsSubmitted(false), 5000)
