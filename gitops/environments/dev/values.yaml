@@ -16,17 +16,13 @@ resources:
 ingress:
   enabled: true
   className: "nginx"
-  annotations:
-    cert-manager.io/cluster-issuer: "selfsigned-issuer"
+  annotations: {}
   hosts:
     - host: grandeurlounge.site
       paths:
         - path: /
           pathType: Prefix
-  tls:
-    - secretName: wedding-hall-tls
-      hosts:
-        - grandeurlounge.site
+  tls: []
 
 autoscaling:
   enabled: false
