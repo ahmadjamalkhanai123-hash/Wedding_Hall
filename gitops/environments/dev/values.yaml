@@ -19,14 +19,14 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: "selfsigned-issuer"
   hosts:
-    - host: wedding-hall.dev.local
+    - host: grandeurlounge.site
       paths:
         - path: /
           pathType: Prefix
   tls:
     - secretName: wedding-hall-tls
       hosts:
-        - wedding-hall.dev.local
+        - grandeurlounge.site
 
 autoscaling:
   enabled: false
