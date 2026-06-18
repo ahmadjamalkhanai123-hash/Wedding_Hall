@@ -16,13 +16,17 @@ resources:
 ingress:
   enabled: true
   className: "nginx"
-  annotations: {}
+  annotations:
+    cert-manager.io/cluster-issuer: "selfsigned-issuer"
   hosts:
     - host: wedding-hall.dev.local
       paths:
         - path: /
           pathType: Prefix
-  tls: []
+  tls:
+    - secretName: wedding-hall-tls
+      hosts:
+        - wedding-hall.dev.local
 
 autoscaling:
   enabled: false
